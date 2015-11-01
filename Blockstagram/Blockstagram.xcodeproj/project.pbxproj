@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820988161BE60EE20029E4EC /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 820988151BE60EE20029E4EC /* Comment.m */; };
+		820988191BE60F680029E4EC /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 820988181BE60F680029E4EC /* DataSource.m */; };
+		825645D11BE5EF8700360EEF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 825645D01BE5EF8700360EEF /* User.m */; };
+		825645D41BE5F04500360EEF /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 825645D31BE5F04500360EEF /* Media.m */; };
 		825B2FF61BE412AA00D1AD72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B2FF51BE412AA00D1AD72 /* main.m */; };
 		825B2FF91BE412AA00D1AD72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B2FF81BE412AA00D1AD72 /* AppDelegate.m */; };
 		825B30011BE412AA00D1AD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 825B30001BE412AA00D1AD72 /* Assets.xcassets */; };
@@ -25,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		820988141BE60EE20029E4EC /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		820988151BE60EE20029E4EC /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		820988171BE60F680029E4EC /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		820988181BE60F680029E4EC /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		825645CF1BE5EF8700360EEF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		825645D01BE5EF8700360EEF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		825645D21BE5F04500360EEF /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		825645D31BE5F04500360EEF /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		825B2FF11BE412AA00D1AD72 /* Blockstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blockstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		825B2FF51BE412AA00D1AD72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		825B2FF71BE412AA00D1AD72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +74,14 @@
 			children = (
 				825B30201BE4131900D1AD72 /* ImagesTableViewController.h */,
 				825B30211BE4131900D1AD72 /* ImagesTableViewController.m */,
+				825645CF1BE5EF8700360EEF /* User.h */,
+				825645D21BE5F04500360EEF /* Media.h */,
+				820988171BE60F680029E4EC /* DataSource.h */,
+				820988181BE60F680029E4EC /* DataSource.m */,
+				820988141BE60EE20029E4EC /* Comment.h */,
+				820988151BE60EE20029E4EC /* Comment.m */,
+				825645D31BE5F04500360EEF /* Media.m */,
+				825645D01BE5EF8700360EEF /* User.m */,
 				825B2FF31BE412AA00D1AD72 /* Blockstagram */,
 				825B2FF21BE412AA00D1AD72 /* Products */,
 			);
@@ -193,7 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				825645D11BE5EF8700360EEF /* User.m in Sources */,
+				820988161BE60EE20029E4EC /* Comment.m in Sources */,
+				825645D41BE5F04500360EEF /* Media.m in Sources */,
 				825B2FF91BE412AA00D1AD72 /* AppDelegate.m in Sources */,
+				820988191BE60F680029E4EC /* DataSource.m in Sources */,
 				825B2FF61BE412AA00D1AD72 /* main.m in Sources */,
 				825B30221BE4131900D1AD72 /* ImagesTableViewController.m in Sources */,
 			);
@@ -336,6 +360,7 @@
 				825B300A1BE412AA00D1AD72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
