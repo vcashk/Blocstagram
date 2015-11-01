@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		820988161BE60EE20029E4EC /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 820988151BE60EE20029E4EC /* Comment.m */; };
 		820988191BE60F680029E4EC /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 820988181BE60F680029E4EC /* DataSource.m */; };
+		8209881C1BE631960029E4EC /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8209881B1BE631960029E4EC /* MediaTableViewCell.m */; };
 		825645D11BE5EF8700360EEF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 825645D01BE5EF8700360EEF /* User.m */; };
 		825645D41BE5F04500360EEF /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 825645D31BE5F04500360EEF /* Media.m */; };
 		825B2FF61BE412AA00D1AD72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B2FF51BE412AA00D1AD72 /* main.m */; };
@@ -33,6 +34,8 @@
 		820988151BE60EE20029E4EC /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		820988171BE60F680029E4EC /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		820988181BE60F680029E4EC /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		8209881A1BE631960029E4EC /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
+		8209881B1BE631960029E4EC /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
 		825645CF1BE5EF8700360EEF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		825645D01BE5EF8700360EEF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		825645D21BE5F04500360EEF /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 			children = (
 				825B30201BE4131900D1AD72 /* ImagesTableViewController.h */,
 				825B30211BE4131900D1AD72 /* ImagesTableViewController.m */,
+				8209881A1BE631960029E4EC /* MediaTableViewCell.h */,
+				8209881B1BE631960029E4EC /* MediaTableViewCell.m */,
 				825645CF1BE5EF8700360EEF /* User.h */,
 				825645D21BE5F04500360EEF /* Media.h */,
 				820988171BE60F680029E4EC /* DataSource.h */,
@@ -215,6 +220,7 @@
 			files = (
 				825645D11BE5EF8700360EEF /* User.m in Sources */,
 				820988161BE60EE20029E4EC /* Comment.m in Sources */,
+				8209881C1BE631960029E4EC /* MediaTableViewCell.m in Sources */,
 				825645D41BE5F04500360EEF /* Media.m in Sources */,
 				825B2FF91BE412AA00D1AD72 /* AppDelegate.m in Sources */,
 				820988191BE60F680029E4EC /* DataSource.m in Sources */,
