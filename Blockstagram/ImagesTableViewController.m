@@ -76,8 +76,18 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
 
-    return [DataSource sharedInstance].mediaItems.count;
+   // return [DataSource sharedInstance].mediaItems.count;
+    
+    return [[self items]count];
 
+}
+
+
+
+- (NSArray *) items {
+    NSArray *item = [DataSource sharedInstance].mediaItems;
+    
+    return item;
 }
 
 
@@ -101,16 +111,23 @@
     }
     
     
-    Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
-    imageView.image = item.image;
+    //Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
+    NSArray *item = [self items];
+    Media *mItem = item[indexPath.row];
+                    
+                   
+    imageView.image =  mItem.image;
     
     return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
-    UIImage *image = item.image;
+//    Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
+    NSArray *item = [self items];
+    Media *mItem = item[indexPath.row];
+
+    UIImage *image = mItem.image;
     
     
     return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
