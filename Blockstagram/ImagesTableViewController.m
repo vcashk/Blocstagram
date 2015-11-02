@@ -74,13 +74,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-
-    
-    NSLog(@"inside the : numberOfRowsInSection, the count is : %i",[DataSource sharedInstance].mediaItems.count);
+  
     
     return [DataSource sharedInstance].mediaItems.count;
-    
-   // return [[self items]count];
+  
 
 }
 
@@ -98,21 +95,12 @@
     MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
     cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
     return cell;
-    
-    return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
   Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
-    
-    
-//    NSArray *item = [self items];
-//    Media *mItem = item[indexPath.row];
-//
-//    UIImage *image = mItem.image;
-//    
-    
+ 
     return [MediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
 }
 
@@ -128,11 +116,12 @@
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
         
-    
+        Media *mediaObject = [[DataSource sharedInstance].mediaItems objectAtIndex:indexPath.row];
         
-        [self.images removeObjectAtIndex:indexPath.row];
+        
+        [[DataSource sharedInstance].mediaItems removeObjectIdenticalTo:mediaObject ];
+        
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         

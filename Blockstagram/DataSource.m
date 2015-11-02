@@ -14,7 +14,7 @@
 
 @interface DataSource ()
 
-@property (nonatomic, strong) NSArray *mediaItems;
+@property (nonatomic, strong) NSMutableArray *mediaItems;
 
 @end
 
