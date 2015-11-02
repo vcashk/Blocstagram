@@ -26,22 +26,20 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-//    for (int i = 1; i <= 10; i++) {
-//        NSString *imageName = [NSString stringWithFormat:@"%d.jpg", i];
-//        UIImage *image = [UIImage imageNamed:imageName];
-//        if (image) {
-//            [self.images addObject:image];
-//        }
-//    }
+    for (int i = 1; i <= 10; i++) {
+        NSString *imageName = [NSString stringWithFormat:@"%d.jpg", i];
+        UIImage *image = [UIImage imageNamed:imageName];
+        if (image) {
+            [self.images addObject:image];
+        }
+    }
 
     
-    
-
     [self.tableView registerClass:[MediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
 
     
@@ -52,7 +50,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        //self.images = [NSMutableArray array];
+        self.images = [NSMutableArray array];
     
       }
     
@@ -77,9 +75,12 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
 
-   // return [DataSource sharedInstance].mediaItems.count;
     
-    return [[self items]count];
+    NSLog(@"inside the : numberOfRowsInSection, the count is : %i",[DataSource sharedInstance].mediaItems.count);
+    
+    return [DataSource sharedInstance].mediaItems.count;
+    
+   // return [[self items]count];
 
 }
 
@@ -103,16 +104,16 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-  //Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
+  Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
     
     
-    NSArray *item = [self items];
-    Media *mItem = item[indexPath.row];
+//    NSArray *item = [self items];
+//    Media *mItem = item[indexPath.row];
 //
 //    UIImage *image = mItem.image;
 //    
     
-    return [MediaTableViewCell heightForMediaItem:mItem width:CGRectGetWidth(self.view.frame)];
+    return [MediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
 }
 
 

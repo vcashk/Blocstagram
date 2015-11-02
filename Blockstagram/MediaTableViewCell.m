@@ -133,7 +133,9 @@ static NSParagraphStyle *paragraphStyle;
 - (void) layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat imageHeight = self.mediaItem.image.size.height / self.mediaItem.image.size.width * CGRectGetWidth(self.contentView.bounds);
+    CGFloat imageHeight = self.mediaItem.image.size.height / 5.675;
+    //the following is leading to a crash since its a division by 0 so using the magic number 5.675
+   // CGFloat imageHeight = self.mediaItem.image.size.height / self.mediaItem.image.size.width * CGRectGetWidth(self.contentView.bounds);
     self.mediaImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.contentView.bounds), imageHeight);
     
     CGSize sizeOfUsernameAndCaptionLabel = [self sizeOfString:self.usernameAndCaptionLabel.attributedText];
